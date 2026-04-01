@@ -72,6 +72,7 @@ Both use `setTimeout`/`clearTimeout` which are lightweight browser APIs.
 - Google Search autocomplete (waits ~150-300ms after typing stops)
 - Form validation (validate after user finishes typing)
 - Auto-save drafts (save after editing pause)
+- [Lesson learned from the project](../../autocomplete/genai/src/design-doc.md#lessons-learned-debouncing--streaming-pitfalls)
 
 **Throttle:**
 - Infinite scroll (check scroll position every 100-200ms)
