@@ -173,7 +173,7 @@ Compare the user's answer to the card's answer. Grade as:
 
 After grading:
 
-1. **Update SM-2 parameters** using the algorithm (see `private/srs-algorithm-reference.md`):
+1. **Update SM-2 parameters** using the algorithm (see `reference/srs-algorithm-reference.md`):
    - Update easiness factor: `EF' = EF + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))`, clamp to min 1.3
    - If correct (`q >= 3`): increment repetitions, calculate new interval (`n=0→1 day, n=1→6 days, n≥2→I*EF`)
    - If incorrect (`q < 3`): reset repetitions to 0, interval to 1 day, keep EF

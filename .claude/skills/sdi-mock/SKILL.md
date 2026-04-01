@@ -114,6 +114,7 @@ Write the file using this structure:
 ### {Section Name} ({N} min)
 **Interviewer**: {your question — verbatim}
 **Candidate**: {their answer — verbatim, preserve their exact wording}
+{if the candidate attached a screenshot/image, embed it here}
 **Interviewer**: {follow-up question}
 **Candidate**: {their response}
 **Notes**: {your observations — what was strong, what was missed, what was partially correct}
@@ -142,6 +143,26 @@ Write the file using this structure:
 ### Recommended Review
 - [{Concept}](../concepts/{path}.md)
 - [{Concept}](../concepts/{path}.md)
+```
+
+### Attachments
+
+When the candidate includes a screenshot or image (e.g., an architecture diagram from Excalidraw), save it to `exercise/mock-sessions/_attachments/` and embed it in the transcript.
+
+**Filename convention:**
+```
+_attachments/{YYYY-MM-DD-HH-MM}-{topic}-{area}-{N}-{title}.{ext}
+```
+
+- `{N}` — sequential counter starting at 1 per session
+- `{title}` — optional short description (e.g., `architecture`, `data-flow`). Omit if not obvious.
+- `{ext}` — preserve the original format (png, jpg, gif, etc.)
+
+Example: `_attachments/2026-03-31-14-30-autocomplete-frontend-1-architecture.png`
+
+**Embed in transcript as:**
+```markdown
+![architecture](./_attachments/2026-03-31-14-30-autocomplete-frontend-1-architecture.png)
 ```
 
 ### Scoring Guide
