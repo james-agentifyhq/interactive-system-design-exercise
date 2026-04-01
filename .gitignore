@@ -20,5 +20,8 @@ venv/
 # Data
 *.db
 
+# Private
+private/
+
 # OS
 .DS_Store
