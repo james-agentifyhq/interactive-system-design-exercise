@@ -1,0 +1,124 @@
+/* Autocomplete component styles */
+
+.autocomplete-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- Input --- */
+.autocomplete-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.autocomplete-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.autocomplete-input::placeholder {
+  color: #94a3b8;
+}
+
+/* --- Results dropdown --- */
+.autocomplete-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.autocomplete-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* --- Individual result item --- */
+.autocomplete-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.autocomplete-result-item:hover,
+.autocomplete-result-item.selected {
+  background-color: #f1f5f9;
+}
+
+.autocomplete-result-item.selected {
+  background-color: #e0e7ff;
+}
+
+.result-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.result-text {
+  flex: 1;
+  font-size: 15px;
+  color: #1e293b;
+  /* Handle long strings — truncate with ellipsis (see frontend.md UX section) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-text strong {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.result-category {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* --- Status messages (loading, error, no results) --- */
+.autocomplete-status {
+  padding: 16px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.autocomplete-error {
+  color: #ef4444;
+}
+
+/* --- Debug panel --- */
+.autocomplete-debug {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 4px;
+  font-size: 12px;
+  color: #94a3b8;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
